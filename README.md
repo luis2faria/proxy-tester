@@ -14,4 +14,4 @@ My motivation for make this code it's very simple I didn't find a cool code like
 # You can contribute
 It is in my plans to give some kind of support to this code anyway if you want to suggest or contribute to the code you'll receive a big hug from me!
 
-# THANK YOU!
+# thank you!
