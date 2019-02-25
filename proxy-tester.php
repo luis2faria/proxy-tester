@@ -536,7 +536,7 @@ function torguard_server_http_https($headers, $index, $timeout, $credentials){
 
     );
 
-    $count_torguard_http_server = count($torguard_http_server, $index);
+    $count_torguard_http_server = count($torguard_http_server);
 
     $cookies = 'cookies/';
 
@@ -641,7 +641,7 @@ function proxyrack_http($headers, $index, $timeout, $credentials){
 
     );
 
-    $count_proxyrack_http_server = count($proxyrack_http_server, $index);
+    $count_proxyrack_http_server = count($proxyrack_http_server);
 
     $cookies = 'cookies/';
 
@@ -745,7 +745,7 @@ function proxyrack_socks5($headers, $index, $timeout, $credentials){
 
     );
 
-    $count_proxyrack_http_server = count($proxyrack_http_server, $index);
+    $count_proxyrack_http_server = count($proxyrack_http_server);
 
     $cookies = 'cookies/';
 
