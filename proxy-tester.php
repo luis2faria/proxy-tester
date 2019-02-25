@@ -878,7 +878,8 @@ function cURL($selection, $test_against, $index, $timeout, $credentials, $public
         $type = 'proxyrack_http';
 
 
-    }if($selection === 11){
+    }
+    if($selection === 11){
 
         $information = proxyrack_random($headers, $timeout, $credentials);
         $direct = false;
