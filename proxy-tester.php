@@ -806,7 +806,8 @@ function cURL($selection, $test_against, $index, $timeout, $credentials, $public
         $direct = true;
         $type = 'direct';
 
-    }if($selection === 1){
+    }
+    if($selection === 1){
 
         $information = public_proxy_http($public_proxy_txt, $headers, $index, $timeout);
         $direct = false;
