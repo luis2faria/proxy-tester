@@ -582,7 +582,7 @@ function proxyrack_http($headers, $index, $timeout, $credentials){
 
     $proxyrack_http_server = array(
 
-		    '209.205.212.34:1200',
+            '209.205.212.34:1200',
             '209.205.212.34:1201',
             '209.205.212.34:1202',
             '209.205.212.34:1203',
@@ -686,7 +686,7 @@ function proxyrack_socks5($headers, $index, $timeout, $credentials){
 
     $proxyrack_http_server = array(
 
-		    '209.205.212.34:1200',
+            '209.205.212.34:1200',
             '209.205.212.34:1201',
             '209.205.212.34:1202',
             '209.205.212.34:1203',
@@ -750,7 +750,6 @@ function proxyrack_socks5($headers, $index, $timeout, $credentials){
     $cookies = 'cookies/';
 
     $proxyrack = $proxyrack_http_server[$index];
-
 
     $options = array(
 
@@ -942,7 +941,6 @@ function cURL($selection, $test_against, $index, $timeout, $credentials, $public
                 logs_good($information['server'], $type);
                 logs_good_result($result, $type);
                 return "Working: ".$result. " <---> ".$information['server'];
-                #return "Working: ".$information['server']." <---> ".$result;
 
             } else {
 
@@ -980,8 +978,8 @@ function logs_fail($ip, $type){
 
 
 }
-for($index = 0; $index < $how_much_times; $index++){
 
+for($index = 0; $index < $how_much_times; $index++){
 
     print cURL($selection, $test_against, $index, $timeout, $credentials, $public_proxy_txt)."\n";
     flush();
