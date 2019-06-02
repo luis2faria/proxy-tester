@@ -406,6 +406,46 @@ function torguard_server_socks5($headers, $timeout, $credentials){
     return $information;
 
 }
+function pia_server_socks5($headers, $timeout, $credentials){
+
+    $cookies = 'cookies/';
+
+    $options = array(
+
+        CURLOPT_MAXREDIRS       => 4,
+        CURLOPT_CONNECTTIMEOUT  => $timeout['CURLOPT_CONNECTTIMEOUT'],
+        CURLOPT_ENCODING        => '',
+        CURLOPT_FOLLOWLOCATION  => false,
+        #CURLOPT_HEADER         => true,
+        CURLOPT_HTTPGET         => true,
+        CURLOPT_HTTPHEADER      => $headers,
+        CURLOPT_HTTPPROXYTUNNEL => true,
+        CURLOPT_PROXY           => 'proxy-nl.privateinternetaccess.com',
+        CURLOPT_PROXYUSERPWD    => $credentials['pia'],
+        CURLOPT_PROXYPORT       => '1080',
+        CURLOPT_PROXYTYPE       => 7,
+        CURLOPT_RETURNTRANSFER  => true,
+        CURLOPT_SSL_VERIFYHOST  => false,
+        CURLOPT_SSL_VERIFYPEER  => false,
+        CURLOPT_TIMEOUT         => $timeout['CURLOPT_TIMEOUT'],
+        CURLOPT_VERBOSE         => false,
+        CURLOPT_COOKIE          => $cookies,
+        CURLOPT_COOKIEFILE      => $cookies,
+        CURLOPT_COOKIEJAR       => $cookies,
+        CURLOPT_COOKIESESSION   => $cookies,
+        CURLOPT_COOKIELIST      => $cookies,
+        CURLOPT_RETURNTRANSFER  => 1,
+        CURLOPT_CUSTOMREQUEST   => 'GET',
+        CURLOPT_ENCODING        => 'gzip, deflate',
+
+    );
+
+    $information['options'] = $options;
+    $information['server'] = 'proxy-nl.privateinternetaccess.com';
+    
+    return $information;
+
+}
 function proxyrack_random($headers, $timeout, $credentials){
 
 
